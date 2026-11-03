@@ -23,8 +23,8 @@ You may copy, share and adapt the data for any purpose, including commercially, 
 
 **Photos** contributed under `photos/` carry their own licence and author, which are stated next to each photo.
 
-**AI images** under `ai-images/` are dedicated to the public domain under CC0 1.0
-(<https://creativecommons.org/publicdomain/zero/1.0/>). Each one is marked as AI-generated in its `1.json`
+**AI images** under `ai-images/` and `ai-recipe-images/` are dedicated to the public domain under CC0 1.0
+(<https://creativecommons.org/publicdomain/zero/1.0/>). Each one is marked as AI-generated in its `.json` sidecar
 and in its embedded metadata (IPTC digital source type `trainedAlgorithmicMedia`). Keep that mark, and do not present
 them as photographs of a recipe.
 

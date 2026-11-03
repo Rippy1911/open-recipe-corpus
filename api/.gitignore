@@ -1,0 +1,6 @@
+# Build output (scripts/build.mjs) and wrangler state: all regenerated from corpus.config.json and the release.
+.build/
+.wrangler/
+src/generated.js
+wrangler.jsonc
+node_modules/

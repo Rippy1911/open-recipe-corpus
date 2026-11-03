@@ -1,0 +1,19 @@
+{
+  "name": "open-recipe-corpus-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Free, rate-limited recipe API and MCP server over the open recipe corpus, on Cloudflare Workers + D1 + R2.",
+  "license": "Apache-2.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "deploy": "node scripts/deploy.mjs",
+    "dev": "node scripts/deploy.mjs --local && wrangler dev",
+    "test": "node --test \"test/*.test.mjs\""
+  },
+  "devDependencies": {
+    "miniflare": "4.20260730.0",
+    "wrangler": "4.145.0"
+  }
+}

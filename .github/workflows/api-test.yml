@@ -1,0 +1,22 @@
+name: api-test
+# The recipe API's tests (api/README.md): the Worker in workerd against a five-recipe fixture. No account needed.
+on:
+  pull_request:
+    paths: ['api/**', '.github/workflows/api-test.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      # The committed api/corpus.config.json must validate (the release itself is not in this repository).
+      - run: node -e "import('./scripts/build.mjs').then(({ validateConfig }) => validateConfig(JSON.parse(require('fs').readFileSync('corpus.config.json', 'utf8'))))"

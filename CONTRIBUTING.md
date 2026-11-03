@@ -53,3 +53,5 @@ Once one of your pull requests has merged, you can have a key with 100 requests 
 
 What you contribute is licensed like the part it goes into: Apache-2.0 for code, CC BY-SA 4.0 for data, and the
 licence you state for a photo.
+
+The corpus is maintained by [Airon](https://airon.app/?utm_source=open-recipe-corpus).

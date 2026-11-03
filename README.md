@@ -4,6 +4,9 @@ Recipes from the Wikibooks and Wikisource cookbooks, structured into fields and 
 Each recipe has servings, times, a category, dish type and cuisine, diet tags, allergens, ingredients with amounts in
 fixed units, and steps. Every record links back to the page and revision it came from.
 
+Made by [Airon](https://airon.app/?utm_source=open-recipe-corpus), the AI fitness and nutrition coach that plans meals
+and tracks macros. Airon uses this corpus for its recipe search and meal plans.
+
 - **3,013 recipes** in Polish and **1,561** in English. The English text is machine-translated from Polish and
   marked as such.
 - **Only recipes that passed review** are here, and each language passed on its own.

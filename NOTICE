@@ -1,0 +1,10 @@
+Open recipe corpus
+https://github.com/Rippy1911/open-recipe-corpus
+Copyright 2026 the Open recipe corpus authors
+
+The code in api/ is licensed under the Apache License, Version 2.0 (LICENSE). If you
+distribute it or a work based on it, keep this notice with it, as section 4(d) of the
+licence requires.
+
+The recipe data (data/, manifest.json) is licensed separately under CC BY-SA 4.0
+(LICENSE-DATA.md). Its sources and how to credit them are in ATTRIBUTION.md.

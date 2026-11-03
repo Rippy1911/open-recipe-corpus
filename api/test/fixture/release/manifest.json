@@ -1,0 +1,12 @@
+{
+  "dataset": "open-recipe-corpus",
+  "version": "0.0.0-dev",
+  "data_license": {
+    "id": "CC-BY-SA-4.0",
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "corpus_revision": "fixture",
+  "dirty": false,
+  "generated_at": "2026-11-03T00:00:00.000Z"
+}

@@ -1,0 +1,15 @@
+{
+  "$comment": "The recipe API instance (README.md in this directory). Paths are relative to this file. For your own copy change name and domain (null = the workers.dev URL only) and empty keys.",
+  "name": "recipe-corpus-api",
+  "domain": "recipes.airon.app",
+  "release_dir": "..",
+  "languages": ["pl", "en"],
+  "fallback_language": "en",
+  "sources": {
+    "include": ["pl-wikibooks", "en-wikibooks", "pl-wikisource"],
+    "licenses": ["CC-BY-SA-4.0", "public-domain"]
+  },
+  "photos": { "bucket": "recipe-corpus-photos", "contributed_dir": "../photos", "ai_dir": "../ai-images" },
+  "limits": { "anonymous": 10, "keyed": 100, "network": 100, "period_seconds": 10, "namespace_id": 41701 },
+  "keys": []
+}

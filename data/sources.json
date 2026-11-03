@@ -1,0 +1,23 @@
+[
+  {
+    "id": "en-wikibooks",
+    "lang": "en",
+    "site": "https://en.wikibooks.org",
+    "license": "CC-BY-SA-4.0",
+    "attribution": "Wikibooks contributors (en.wikibooks.org Cookbook)"
+  },
+  {
+    "id": "pl-wikibooks",
+    "lang": "pl",
+    "site": "https://pl.wikibooks.org",
+    "license": "CC-BY-SA-4.0",
+    "attribution": "Autorzy Wikibooks (pl.wikibooks.org, Książka kucharska)"
+  },
+  {
+    "id": "pl-wikisource",
+    "lang": "pl",
+    "site": "https://pl.wikisource.org",
+    "license": "public-domain",
+    "attribution": "{book} (domena publiczna, pl.wikisource.org)"
+  }
+]

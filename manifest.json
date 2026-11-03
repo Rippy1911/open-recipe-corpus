@@ -1,0 +1,19 @@
+{
+  "dataset": "open-recipe-corpus",
+  "version": "0.0.0-dev",
+  "data_license": {
+    "id": "CC-BY-SA-4.0",
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "corpus_revision": "5b066e2",
+  "dirty": false,
+  "generated_at": "2026-11-03T11:22:50.884Z",
+  "counts": {
+    "recipes": 3013,
+    "text": {
+      "pl": 3013,
+      "en": 1561
+    }
+  }
+}

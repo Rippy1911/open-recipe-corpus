@@ -21,8 +21,8 @@ photos/<recipe id, with ":" as "-">/1.json
 - **Example:** recipe `plwb:9356` goes in `photos/plwb-9356/`.
 
 A contributed photo is served by the API ahead of any other image for that recipe, with your name and licence.
-`ai-images/` holds the project's own AI-generated illustrations. Don't add to that folder: a real photo goes in
-`photos/` and takes their place.
+`ai-images/` and `ai-recipe-images/` hold the project's own AI-generated illustrations. Don't add to those folders: a
+real photo goes in `photos/` and takes their place.
 
 ## A correction to a recipe
 

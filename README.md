@@ -13,6 +13,8 @@ and tracks macros. Airon uses this corpus for its recipe search and meal plans.
 - **No nutrition** data.
 - **97 AI-generated dish illustrations** are in `ai-images/`, CC0 and labelled as AI-generated. They are not
   photographs, and a contributed photo of the recipe takes their place.
+- **150 AI-generated step-by-step illustrations** are in `ai-recipe-images/`: four steps and a card picture for each
+  of 30 AI-written recipes, also CC0 and labelled. Those recipes' text is not part of this dataset.
 - **Licences:** the data is CC BY-SA 4.0 ([`LICENSE-DATA.md`](LICENSE-DATA.md), [`ATTRIBUTION.md`](ATTRIBUTION.md)).
   The code in `api/` is Apache-2.0 ([`LICENSE`](LICENSE), [`NOTICE`](NOTICE)).
 
@@ -59,6 +61,7 @@ free plan (Workers, D1, R2).
 | `data/sources.json` | (one array) | each source: site, licence, credit line |
 | `manifest.json` | (one object) | the data licence, the corpus revision it was built from, and counts |
 | `ai-images/<dish>/1.webp` + `1.json` | dish | an AI-generated illustration with `dish`, `qid`, `ai_generated: true` and `license: CC0-1.0`. The API matches it to recipes by Wikidata QID or exact dish name. |
+| `ai-recipe-images/<recipe>/<step>.webp` + `.json` | step of an AI-written recipe | an AI-generated illustration with `recipe`, `step` (`hero.webp` is the card crop, with `crop_of_step`), `ai_generated: true` and `license: CC0-1.0`. The API does not serve these. |
 | `photos/<recipe id>/` | recipe | contributed photos with their author and licence ([`CONTRIBUTING.md`](CONTRIBUTING.md)) |
 
 - **Ingredients line up by position.** `recipes.jsonl` holds the amounts, and each text file holds the names in its

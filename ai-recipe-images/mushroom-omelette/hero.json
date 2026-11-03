@@ -1,0 +1,9 @@
+{
+  "recipe": "Mushroom omelette",
+  "step": null,
+  "crop_of_step": 4,
+  "file": "hero.webp",
+  "ai_generated": true,
+  "digital_source_type": "trainedAlgorithmicMedia",
+  "license": "CC0-1.0"
+}

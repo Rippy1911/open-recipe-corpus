@@ -8,6 +8,8 @@ fixed units, and steps. Every record links back to the page and revision it came
   marked as such.
 - **Only recipes that passed review** are here, and each language passed on its own.
 - **No nutrition** data.
+- **97 AI-generated dish illustrations** are in `ai-images/`, CC0 and labelled as AI-generated. They are not
+  photographs, and a contributed photo of the recipe takes their place.
 - **Licences:** the data is CC BY-SA 4.0 ([`LICENSE-DATA.md`](LICENSE-DATA.md), [`ATTRIBUTION.md`](ATTRIBUTION.md)).
   The code in `api/` is Apache-2.0 ([`LICENSE`](LICENSE), [`NOTICE`](NOTICE)).
 
@@ -53,6 +55,8 @@ free plan (Workers, D1, R2).
 | `data/text/<lang>.jsonl` | recipe in that language | `id`, `name`, `summary`, `ingredients` (`name`, `note`), `steps`, and `machine_translated` with `translated_from` for translated text |
 | `data/sources.json` | (one array) | each source: site, licence, credit line |
 | `manifest.json` | (one object) | the data licence, the corpus revision it was built from, and counts |
+| `ai-images/<dish>/1.webp` + `1.json` | dish | an AI-generated illustration with `dish`, `qid`, `ai_generated: true` and `license: CC0-1.0`. The API matches it to recipes by Wikidata QID or exact dish name. |
+| `photos/<recipe id>/` | recipe | contributed photos with their author and licence ([`CONTRIBUTING.md`](CONTRIBUTING.md)) |
 
 - **Ingredients line up by position.** `recipes.jsonl` holds the amounts, and each text file holds the names in its
   language.

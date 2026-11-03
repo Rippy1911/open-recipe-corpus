@@ -9,7 +9,7 @@
     "include": ["pl-wikibooks", "en-wikibooks", "pl-wikisource"],
     "licenses": ["CC-BY-SA-4.0", "public-domain"]
   },
-  "photos": { "bucket": "recipe-corpus-photos", "contributed_dir": "../photos", "ai_dir": null },
+  "photos": { "bucket": "recipe-corpus-photos", "contributed_dir": "../photos", "ai_dir": "../ai-images" },
   "limits": { "anonymous": 10, "keyed": 100, "network": 100, "period_seconds": 10, "namespace_id": 41701 },
   "keys": []
 }

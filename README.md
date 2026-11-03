@@ -7,6 +7,10 @@ fixed units, and steps. Every record links back to the page and revision it came
 Made by [Airon](https://airon.app/?utm_source=open-recipe-corpus), the AI fitness and nutrition coach that plans meals
 and tracks macros. Airon uses this corpus for its recipe search and meal plans.
 
+**[Browse it in the cookbook →](https://cookbook.airon.app)** Search every recipe here by name or ingredient, and
+filter by meal, diet, cuisine and time, in 11 interface languages. The cookbook also shows recipes still waiting for
+review and AI-written recipes, each labelled as such.
+
 - **3,013 recipes** in Polish and **1,561** in English. The English text is machine-translated from Polish and
   marked as such.
 - **Only recipes that passed review** are here, and each language passed on its own.

@@ -161,7 +161,8 @@ export async function searchRecipes(db, a, origin) {
     where.push(`(t.name_norm LIKE ? ESCAPE '\\' OR t.name_norm LIKE ? ESCAPE '\\')`);
     binds.push(`${p}%`, `% ${p}%`);
   }
-  if (L === F) { where.push('t.lang = ?'); binds.push(L); } else {
+  // The fallback clause only where the build counted recipes that need it: without it, (lang, name_norm) is one index walk.
+  if (L === F || !R.facets[L]?.in_fallback_language) { where.push('t.lang = ?'); binds.push(L); } else {
     where.push('(t.lang = ? OR (t.lang = ? AND NOT EXISTS (SELECT 1 FROM txt x WHERE x.id = t.id AND x.lang = ?)))');
     binds.push(L, F, L);
   }

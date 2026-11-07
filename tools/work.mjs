@@ -3,10 +3,11 @@
 //   node tools/work.mjs                                  a summary of every track
 //   node tools/work.mjs translate <lang> [--from en|pl]  the next recipes to translate into <lang>
 //   node tools/work.mjs photos                           recipes with no picture at all
-//   node tools/work.mjs status [--write]                 the numbers; --write rewrites STATUS.md and the README block
+//   node tools/work.mjs status [--write]                 the numbers; --write rewrites STATUS.md, the README block and
+//                                                        the release named in CITATION.cff
 //
 // Lists take --n <count> (default 25), --offset <k> (skip k, to take a different slice from someone else) and --json.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { PIPELINE_LANGS } from './validate.mjs';
@@ -104,6 +105,14 @@ export function writeStatus(root = '.') {
   const re = /(<!-- status:start[^>]*-->\n)[\s\S]*?(<!-- status:end -->)/;
   if (!re.test(readme)) throw new Error('README.md has no <!-- status:start --> … <!-- status:end --> block');
   writeFileSync(join(root, 'README.md'), readme.replace(re, (_, a, b) => `${a}${readmeBlock(n)}\n${b}`));
+  // CITATION.cff names the release, so "Cite this repository" cites the data as it is.
+  const cff = join(root, 'CITATION.cff');
+  if (existsSync(cff)) {
+    const lines = readFileSync(cff, 'utf8').split('\n').filter((l) => !/^(version|date-released):/.test(l));
+    const at = lines.findIndex((l) => l.startsWith('license:'));
+    lines.splice(at < 0 ? lines.length - 1 : at + 1, 0, `version: "${n.version}"`, `date-released: ${n.generated_at.slice(0, 10)}`);
+    writeFileSync(cff, lines.join('\n'));
+  }
   return n;
 }
 

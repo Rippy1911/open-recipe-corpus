@@ -116,3 +116,13 @@ test('status --write rewrites STATUS.md and only the marked README block', () =>
   assert.match(readme, /^# x\n<!-- status:start -->\n- \*\*3 recipes\*\* with 9 steps: \*\*3\*\* in `pl`, \*\*1\*\* in `en`\.[\s\S]*\n<!-- status:end -->\nrest\n$/);
   assert.match(readFileSync(join(root, 'STATUS.md'), 'utf8'), /\| `en` \| 1 \| 33 % \| 1 \|/);
 });
+
+test('status --write names the release in CITATION.cff, the same on every run', () => {
+  const { root, w } = fixture();
+  w('CITATION.cff', 'cff-version: 1.2.0\ntitle: x\nlicense: CC-BY-SA-4.0\nversion: "0.0.1"\nkeywords:\n  - a\n');
+  writeStatus(root);
+  const once = readFileSync(join(root, 'CITATION.cff'), 'utf8');
+  assert.equal(once, 'cff-version: 1.2.0\ntitle: x\nlicense: CC-BY-SA-4.0\nversion: "0.1.0"\ndate-released: 2026-11-07\nkeywords:\n  - a\n');
+  writeStatus(root);
+  assert.equal(readFileSync(join(root, 'CITATION.cff'), 'utf8'), once);
+});

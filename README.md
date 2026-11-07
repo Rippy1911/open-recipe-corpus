@@ -9,7 +9,7 @@ language is open for translation.
 - **3,013 recipes** with 20,970 steps: **3,013** in `pl`, **1,561** in `en`.
 - **75 have a picture** so far (97 AI dish images, 0 contributed photos).
 - **150 AI step pictures** for 30 AI-written recipes; step pictures for these recipes are planned.
-- Release `0.0.0-dev` (2026-11-03). Every number: [`STATUS.md`](STATUS.md).
+- Release `0.1.0` (2026-11-07). Every number: [`STATUS.md`](STATUS.md).
 <!-- status:end -->
 
 **[Browse the cookbook →](https://cookbook.airon.app)** · **[API and MCP](api/README.md)** at `recipes.airon.app` ·

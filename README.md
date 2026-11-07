@@ -1,26 +1,36 @@
 # Open recipe corpus
 
-Recipes from the Wikibooks and Wikisource cookbooks, structured into fields and checked, in Polish and English.
+**Recipes anyone may cook, share and build on, in every language.** We take recipes whose licences allow it (the
+Wikibooks cookbooks and public-domain cookbooks), structure them into fields, check them, translate them, illustrate
+them, and serve them free as data, an API and an MCP server. Today they are in Polish and English; every other
+language is open for translation.
+
+<!-- status:start: written by node tools/work.mjs status --write -->
+- **3,013 recipes** with 20,970 steps: **3,013** in `pl`, **1,561** in `en`.
+- **75 have a picture** so far (97 AI dish images, 0 contributed photos).
+- **150 AI step pictures** for 30 AI-written recipes; step pictures for these recipes are planned.
+- Release `0.0.0-dev` (2026-11-03). Every number: [`STATUS.md`](STATUS.md).
+<!-- status:end -->
+
+**[Browse the cookbook →](https://cookbook.airon.app)** · **[API and MCP](api/README.md)** at `recipes.airon.app` ·
+**[What needs doing](WORK.md)** · **[Sources](SOURCES.md)**
+
 Each recipe has servings, times, a category, dish type and cuisine, diet tags, allergens, ingredients with amounts in
-fixed units, and steps. Every record links back to the page and revision it came from.
+metric units, and numbered steps. Every record links back to the page and revision it came from. Recipes linked to a
+Wikidata dish carry its id.
 
 Made by [Airon](https://airon.app/?utm_source=open-recipe-corpus), the AI fitness and nutrition coach that plans meals
 and tracks macros. Airon uses this corpus for its recipe search and meal plans.
 
-**[Browse it in the cookbook →](https://cookbook.airon.app)** Search every recipe here by name or ingredient, and
-filter by meal, diet, cuisine and time, in 11 interface languages. The cookbook also shows recipes still waiting for
-review and AI-written recipes, each labelled as such.
+## Help
 
-- **3,013 recipes** in Polish and **1,561** in English. The English text is machine-translated from Polish and
-  marked as such.
-- **Only recipes that passed review** are here, and each language passed on its own.
-- **No nutrition** data.
-- **97 AI-generated dish illustrations** are in `ai-images/`, CC0 and labelled as AI-generated. They are not
-  photographs, and a contributed photo of the recipe takes their place.
-- **150 AI-generated step-by-step illustrations** are in `ai-recipe-images/`: four steps and a card picture for each
-  of 30 AI-written recipes, also CC0 and labelled. Those recipes' text is not part of this dataset.
-- **Licences:** the data is CC BY-SA 4.0 ([`LICENSE-DATA.md`](LICENSE-DATA.md), [`ATTRIBUTION.md`](ATTRIBUTION.md)).
-  The code in `api/` is Apache-2.0 ([`LICENSE`](LICENSE), [`NOTICE`](NOTICE)).
+- **Translate** recipes into your language, yourself or with an AI model: `node tools/work.mjs translate <lang>`.
+- **Photograph** a recipe you cooked: most recipes have no picture yet.
+- **Report a mistake**, **share a recipe** of your own, or **propose a source** we may use.
+
+[`WORK.md`](WORK.md) lists everything that is needed, [`CONTRIBUTING.md`](CONTRIBUTING.md) says how, and
+[`AGENTS.md`](AGENTS.md) is for AI models. Only recipes that passed their checks are in `data/`, each language on its
+own; English text is machine-translated from Polish and labelled as such.
 
 ## Use it without downloading anything
 
@@ -66,7 +76,8 @@ free plan (Workers, D1, R2).
 | `manifest.json` | (one object) | the data licence, the corpus revision it was built from, and counts |
 | `ai-images/<dish>/1.webp` + `1.json` | dish | an AI-generated illustration with `dish`, `qid`, `ai_generated: true` and `license: CC0-1.0`. The API matches it to recipes by Wikidata QID or exact dish name. |
 | `ai-recipe-images/<recipe>/<step>.webp` + `.json` | step of an AI-written recipe | an AI-generated illustration with `recipe`, `step` (`hero.webp` is the card crop, with `crop_of_step`), `ai_generated: true` and `license: CC0-1.0`. The API does not serve these. |
-| `photos/<recipe id>/` | recipe | contributed photos with their author and licence ([`CONTRIBUTING.md`](CONTRIBUTING.md)) |
+| `photos/<recipe id>/` | recipe | contributed photos with their author and licence ([`CONTRIBUTING.md`](CONTRIBUTING.md#photo)) |
+| `contrib/translations/<lang>/` | recipe in that language | contributed translations waiting for their check ([`contrib/README.md`](contrib/README.md)) |
 
 - **Ingredients line up by position.** `recipes.jsonl` holds the amounts, and each text file holds the names in its
   language.
@@ -76,8 +87,12 @@ free plan (Workers, D1, R2).
   `attribution` (the credit line), `source_license`, `license` and `changes`. Recipes from public-domain books also
   have `based_on` and `adaptation_notes`. See [`ATTRIBUTION.md`](ATTRIBUTION.md).
 
-## Contributing
+## Licences
 
-Photos of dishes cooked from these recipes, corrections, and API improvements are all welcome. See
-[`CONTRIBUTING.md`](CONTRIBUTING.md). Once a pull request of yours has merged, you can have an API key with a 10×
-higher limit.
+- **Data:** CC BY-SA 4.0 ([`LICENSE-DATA.md`](LICENSE-DATA.md)). Keep each recipe's credit line and links
+  ([`ATTRIBUTION.md`](ATTRIBUTION.md)).
+- **AI images** in `ai-images/` and `ai-recipe-images/`: CC0 1.0, labelled as AI-generated. They are not photographs.
+- **Photos** in `photos/`: the licence stated next to each one.
+- **Code** in `api/` and `tools/`: Apache-2.0 ([`LICENSE`](LICENSE), [`NOTICE`](NOTICE)).
+
+To cite the dataset, use [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository").

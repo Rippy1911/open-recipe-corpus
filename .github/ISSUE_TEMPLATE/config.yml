@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Browse the cookbook
+    url: https://cookbook.airon.app
+    about: Every recipe, searchable, in 11 interface languages.
+  - name: Use the API or MCP server
+    url: https://github.com/Rippy1911/open-recipe-corpus/blob/main/api/README.md
+    about: Endpoints, MCP tools, limits and how to host your own.

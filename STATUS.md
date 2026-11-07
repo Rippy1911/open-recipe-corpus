@@ -1,6 +1,6 @@
 # Status
 
-Release `0.0.0-dev`, built from corpus revision `5b066e2` on 2026-11-03. Written by `node tools/work.mjs status --write` at each release. [`WORK.md`](WORK.md) says how to help with each part.
+Release `0.1.0`, built from corpus revision `49cc6a5` on 2026-11-07. Written by `node tools/work.mjs status --write` at each release. [`WORK.md`](WORK.md) says how to help with each part.
 
 ## Recipes
 
@@ -20,7 +20,7 @@ Each language is released on its own: a recipe's text in a language ships once t
 | `pl` | 3,013 | 100 % | 0 |
 | `en` | 1,561 | 52 % | 1,561 |
 
-Every other language: 0. Any language is welcome: [`WORK.md`](WORK.md) § Translate.
+Every other language: 0. Any language is welcome: [`WORK.md`](WORK.md#which-languages).
 
 ## Pictures
 

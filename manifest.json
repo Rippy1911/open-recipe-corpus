@@ -1,14 +1,14 @@
 {
   "dataset": "open-recipe-corpus",
-  "version": "0.0.0-dev",
+  "version": "0.1.0",
   "data_license": {
     "id": "CC-BY-SA-4.0",
     "name": "CC BY-SA 4.0",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
-  "corpus_revision": "5b066e2",
+  "corpus_revision": "49cc6a5",
   "dirty": false,
-  "generated_at": "2026-11-03T11:22:50.884Z",
+  "generated_at": "2026-11-07T15:16:07.750Z",
   "counts": {
     "recipes": 3013,
     "text": {

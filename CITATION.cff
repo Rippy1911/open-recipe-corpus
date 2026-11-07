@@ -16,6 +16,8 @@ authors:
 repository-code: https://github.com/Rippy1911/open-recipe-corpus
 url: https://cookbook.airon.app
 license: CC-BY-SA-4.0
+version: "0.1.0"
+date-released: 2026-11-07
 keywords:
   - recipes
   - cookbook

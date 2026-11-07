@@ -70,6 +70,6 @@ project's AI images. It is listed here so everyone can see what is coming. As of
 
 **Releases and reach**
 
-- [ ] Number the releases (`v0.1.0` next) and publish each as a GitHub release.
+- [x] Number the releases and publish each as a GitHub release: [`v0.1.0`](https://github.com/Rippy1911/open-recipe-corpus/releases/tag/v0.1.0) on 2026-11-07.
 - [ ] Mirror each release on Hugging Face and archive it on Zenodo for a DOI.
 - [ ] Recipe pages that search engines can index, with schema.org `Recipe` data.

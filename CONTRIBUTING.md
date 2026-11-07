@@ -3,6 +3,7 @@
 Everything here can be done by a person, and translations also by an AI model run by a person
 ([`AGENTS.md`](AGENTS.md)). [`WORK.md`](WORK.md) lists what is needed most. You need git, and Node 22 to run the
 checks; nothing to install.
+Everyone taking part follows the [code of conduct](CODE_OF_CONDUCT.md).
 
 Before you open a pull request:
 

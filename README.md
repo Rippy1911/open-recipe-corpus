@@ -12,8 +12,8 @@ language is open for translation.
 - Release `0.1.0` (2026-11-07). Every number: [`STATUS.md`](STATUS.md).
 <!-- status:end -->
 
-**[Browse the cookbook →](https://cookbook.airon.app)** · **[API and MCP](api/README.md)** at `recipes.airon.app` ·
-**[What needs doing](WORK.md)** · **[Sources](SOURCES.md)**
+**[Browse the cookbook →](https://cookbook.airon.app)** · **[Docs](https://cookbook.airon.app/#/en/docs)** ·
+**[API and MCP](api/README.md)** at `recipes.airon.app` · **[What needs doing](WORK.md)** · **[Sources](SOURCES.md)**
 
 Each recipe has servings, times, a category, dish type and cuisine, diet tags, allergens, ingredients with amounts in
 metric units, and numbered steps. Every record links back to the page and revision it came from. Recipes linked to a

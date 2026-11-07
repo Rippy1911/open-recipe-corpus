@@ -1,0 +1,20 @@
+name: validate
+# The contribution checks (CONTRIBUTING.md): photos, contributed translations, and the release itself. No install.
+on:
+  pull_request:
+    paths: ['photos/**', 'contrib/**', 'data/**', 'manifest.json', 'ai-images/**', 'tools/**', 'api/src/text.js', '.github/workflows/validate.yml']
+  push:
+    branches: [main]
+    paths: ['photos/**', 'contrib/**', 'data/**', 'manifest.json', 'ai-images/**', 'tools/**', 'api/src/text.js', '.github/workflows/validate.yml']
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test tools/*.test.mjs
+      - run: node tools/validate.mjs

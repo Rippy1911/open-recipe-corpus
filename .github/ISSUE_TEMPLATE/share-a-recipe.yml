@@ -1,0 +1,66 @@
+name: Share a recipe
+description: A recipe of your own, or one from a source that may be shared, in any language.
+title: "Recipe: "
+labels: ["recipe"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you! Write it in your own language. A maintainer turns it into a structured record, checks it like every other recipe, and credits you in the release.
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: The language you write the recipe in.
+      placeholder: Deutsch
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name of the dish
+    validations:
+      required: true
+  - type: input
+    id: servings
+    attributes:
+      label: Servings and time
+      placeholder: 4 servings, 20 min preparation, 40 min cooking
+  - type: textarea
+    id: ingredients
+    attributes:
+      label: Ingredients
+      description: One per line, with the amount.
+      placeholder: |
+        500 g potatoes
+        1 onion
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: One per line, in order.
+    validations:
+      required: true
+  - type: dropdown
+    id: origin
+    attributes:
+      label: Where it comes from
+      options:
+        - My own recipe, one I cook
+        - A source listed as in use in SOURCES.md, or one that is in the public domain (link it below)
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source link
+      description: Only if it comes from a source. Not a website, blog or cookbook still in copyright.
+  - type: checkboxes
+    id: licence
+    attributes:
+      label: Licence
+      options:
+        - label: I license this recipe under CC BY-SA 4.0, and it was not written by an AI model.
+          required: true

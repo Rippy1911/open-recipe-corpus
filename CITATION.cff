@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: >-
+  If you use this dataset, please cite it as below, and keep each recipe's own credit line and links
+  (ATTRIBUTION.md).
+type: dataset
+title: Open recipe corpus
+abstract: >-
+  Recipes from the Wikibooks and Wikisource cookbooks, structured into fields (servings, times, metric amounts,
+  numbered steps, allergens, diet tags, Wikidata dish links) and checked, released per language with every
+  translation checked on its own. Served free as data, a REST API and an MCP server. AI dish and step illustrations
+  are included under CC0 and labelled as AI-generated.
+authors:
+  - name: Airon
+    website: https://airon.app
+  - name: Wikibooks and Wikisource contributors
+repository-code: https://github.com/Rippy1911/open-recipe-corpus
+url: https://cookbook.airon.app
+license: CC-BY-SA-4.0
+keywords:
+  - recipes
+  - cookbook
+  - multilingual
+  - open data
+  - dataset
+  - translation
+  - Wikibooks
+  - Wikisource
+  - Wikidata
+  - Polish cuisine
+  - MCP
